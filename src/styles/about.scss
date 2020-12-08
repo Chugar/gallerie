@@ -1,0 +1,94 @@
+@import './colors';
+
+#photosAbout {
+    background-color: $bg-color;
+    padding-top: 195px;
+    padding-bottom: 140px;
+
+    .row {
+
+        .leftside {
+            position: relative;
+            box-sizing: border-box;
+            padding: 15px 25px;
+
+            h3 {
+                font-size: 50px;
+                color: #fff;
+                font-weight: 700;
+                margin-bottom: 48px;
+                line-height: 1.5;
+                text-transform: capitalize;
+                font-family: $font-fam;
+            }
+
+            .mailAdrress {
+                color: $red-color;
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 10px;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+            }
+        }
+
+        .rightSide {
+            color: #fff;
+            position: relative;
+            box-sizing: border-box;
+            padding: 15px 25px;
+
+
+            h3 {
+                font-size: 18px;
+                font-weight: 400;
+                margin-bottom: 35px;
+                line-height: 1.5;
+            }
+
+            .patronyme {
+                margin-bottom: 25px;
+                color: $white-color;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 60px;
+                    height: 1px;
+                    background: #d3d3d4;
+                    top: 12px;
+                    left: 147px;
+                }
+                 
+                span {
+                    display: block;
+                    text-transform: uppercase;
+                }
+            }
+
+            div {
+
+                .digit {
+                    font-family: $font-fam;
+                    font-weight: 700;
+                    font-size: 90px;
+                    color: #fff;
+                    line-height: 1;
+                }
+
+                .explanation {
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        color: #fff;
+                        padding-left: 30px;
+                        font-family: $font-fam;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
