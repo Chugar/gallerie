@@ -1,0 +1,36 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import './../colors';
+
+
+/* NAV */
+.navbar-brand {
+    color: $pale-color;
+    &:hover {
+        color: $red-color;
+    }
+}
+
+.nav-link {
+    color: $pale-color;
+    &:hover {
+        color: $red-color;
+    }
+}
+
+
+/* BUTTONS */
+.btn:focus, .btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: -15px;
+    right: -150px;
+}

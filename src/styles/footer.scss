@@ -1,0 +1,44 @@
+@import './colors';
+
+#gallery-footer {
+    color: $pale-color;
+    background-color: $dark-grey-color;
+
+    .footer-top {
+        padding-top: 50px;
+        padding-bottom: 70px;
+        .footer-title {
+            .info {
+                line-height: 1.8;
+                margin-bottom: 30px;
+                padding-right: 74px;
+                color: #fff;
+            }
+        }
+
+        .single-footer-caption {
+            li {
+                list-style: none;
+                margin-bottom: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: lighten($dark-color, 50);
+                    transition: padding-left 400ms ease-in;
+                                        
+                    &:hover {
+                        color: $red-color;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color:lighten($dark-color, 3);
+        padding: 25px;
+        color: darken($white-color, 25);
+        font-weight: 300;
+    }
+}

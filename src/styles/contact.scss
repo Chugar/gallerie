@@ -1,0 +1,58 @@
+@import './colors';
+
+#gallery-contact {
+    background-color: $bg-color;
+    color: $pale-color;
+    padding: 35px 20px;
+
+    .contact-header {
+        margin-bottom: 60px;
+        h2 {
+            text-align: center;
+            font-weight: $font-fam;
+            font-size: 80px;
+            font-weight: 700;
+        }
+    }
+
+    input, textarea {
+        background-color: $bg-color;
+        color: $pale-color;
+        border: 1px solid $pale-color;
+        border-radius: 0%;
+    }
+
+    .contact-body {
+
+
+        .gallery-submit-btn {
+            background: transparent;
+            width: 18%;
+            padding: 18px 9px;
+            box-sizing: border-box;
+            border: 1px solid $red-color;
+            color: $red-color;
+            font-family: $font-fam;
+            font-size: 1.4em;
+            font-weight: 400;
+            margin: 25px 0;
+            transition: all 250ms ease-in;
+    
+            &:hover {
+                color: $pale-color;
+                background-color: $red-color;
+            }
+        }
+    
+        .contact-info-text {
+            p {
+                color: darken($color: #fff, $amount: 35);
+                font-size: 1em;
+                font-weight: lighter;
+            }
+        }
+
+    }
+
+    
+}

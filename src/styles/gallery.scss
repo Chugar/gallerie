@@ -1,0 +1,91 @@
+@import './colors';
+
+#photosGallery {
+    background-color: $bg-color;
+    padding-top: 195px;
+    padding-bottom: 90px;
+
+    $ligth-grey-color: lighten($dark-grey-color, 2);
+    #gallery-header {
+        background: linear-gradient(to bottom, $ligth-grey-color, $dark-grey-color);
+        height: 230px;
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-family: $font-fam;
+            text-align: center;
+            font-size: 80px;
+            font-weight: 700;
+            color: $pale-color;
+        }
+    }
+
+
+    .gallery-box {
+        
+        .single-gallery {
+            overflow: hidden;
+            z-index: 0;
+            position: relative;
+            box-sizing: border-box;
+
+            .gallery-img {
+                height: 650px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: 0;
+            }
+
+            .cap-icon {
+                position: absolute;
+                top: 50px;
+                left: 20px;
+                z-index: 2;
+                opacity: 0;
+                visibility: hidden;
+                width: 75px;
+
+                a {
+                    background-color: transparent;
+                    border-color: transparent;
+                    color: none;
+                    font-size: 1.7em;
+                }
+            }
+
+            .g-caption {
+                position: absolute;
+                z-index: 5;
+                left: 40px;
+                bottom: 15px;
+                transform: translateY(0%);
+                -webkit-transform: translateY(0%);
+                -moz-transform: translateY(0%);
+                -ms-transform: translateY(0%);
+                -o-transform: translateY(0%);
+                -webkit-transition: all .4s ease-out 0s;
+                -moz-transition: all .4s ease-out 0s;
+                -ms-transition: all .4s ease-out 0s;
+                -o-transition: all .4s ease-out 0s;
+                transition: all .4s ease-out 0s;
+                opacity: 0;
+                visibility: hidden;
+                color: wheat;
+            }
+        }
+    }
+
+
+    .gallery-btn {
+        margin-top: 50px;
+
+        .btn {
+            font-family: $font-fam;
+            font-size: 1.7em;
+            &:hover {
+                color: $pale-color;
+            }
+        }
+    }
+}

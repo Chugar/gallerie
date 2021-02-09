@@ -33,7 +33,7 @@ function compileSASS() {
 
 
 function customBootstrap() {
-    return gulp.src('src/styles/custom/*.scss')
+    return gulp.src('src/styles/bootstrap/*.scss')
     .pipe(sourcemap.init())
     .pipe(sassCompiler().on('error', sassCompiler.logError))
     .pipe(sourcemap.write())
@@ -42,5 +42,24 @@ function customBootstrap() {
 }
 
 
+function watchTask() {
+    gulp.watch(
+        [   'src/scripts/*.js', 
+            'src/styles/*.scss', 
+            'src/styles/bootstrap/*.scss',
+            'src/index.html'
+        ], 
+        {interval: 1000},
+        gulp.parallel(copyHTML, customBootstrap, concatJS, compileSASS)
+    )
+}
 
-exports.default = gulp.parallel(copyHTML, customBootstrap, concatJS, compileSASS);
+
+exports.default = gulp.series(
+    gulp.parallel(copyHTML, customBootstrap, concatJS, compileSASS), 
+    watchTask
+);
+
+
+
+// exports.default = gulp.parallel(copyHTML, customBootstrap, concatJS, compileSASS);
